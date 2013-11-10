@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @act.name %>
+</p>
+
+<p>
+  <strong>Performance date:</strong>
+  <%= @act.performance_date %>
+</p>
+
+<p>
+  <strong>Amoebas Performing:</strong>
+</p>
+  <ul>
+  <% @act.amoebas.each do |amoeba| %>
+    <li><%= link_to amoeba.name, amoeba_path(amoeba) %></li>
+  <% end %>
+  </ul>
+
+
+<%= link_to 'Edit', edit_act_path(@act) %> |
+<%= link_to 'Back', acts_path %>
+
+

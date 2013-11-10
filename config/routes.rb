@@ -1,4 +1,13 @@
 AmoebaCircus::Application.routes.draw do
+  resources :acts
+
+  resources :amoebas
+  
+  get 'amoebas/:id/split' => 'amoebas#split', as: :split
+  post 'amoebas/split' => 'amoebas#splitter'
+
+  root 'acts#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
