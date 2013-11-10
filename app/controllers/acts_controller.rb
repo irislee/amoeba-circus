@@ -20,10 +20,11 @@ class ActsController < ApplicationController
 
   # GET /acts/1/edit
   def edit
+    @amoebas = Amoeba.all
   end
 
-  POST /acts
-  POST /acts.json
+  # POST /acts
+  # POST /acts.json
   def create
     @act = Act.new(act_params)
 
@@ -70,6 +71,6 @@ class ActsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def act_params
-      params.require(:act).permit(:name, :performance_date) 
+      params.require(:act).permit(:name, :performance_date, :amoeba_ids => []) 
     end
 end

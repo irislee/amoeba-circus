@@ -14,6 +14,16 @@
   <strong>Talent:</strong>
   <%= @amoeba.talent.name %>
 </p>
+
+<p>
+  <strong>Acts:</strong>
+  <ul>
+    <% @amoeba.acts.each do |act| %>
+      <li><%= link_to act.name, act_path(act) %></li>
+    <% end %>
+  </ul>
+</p>
+
 <hr>
 <%= link_to 'Split', split_path(@amoeba) %> |
 <%= link_to 'Edit', edit_amoeba_path(@amoeba) %> |

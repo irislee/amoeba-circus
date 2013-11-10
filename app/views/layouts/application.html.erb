@@ -7,7 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <nav>
+    <%= link_to 'Home', root_path %> | 
+    <%= link_to 'Amoebas', amoebas_path %> | 
+    <%= link_to 'Acts', acts_path %>
+  </nav>
 <%= yield %>
 
 </body>

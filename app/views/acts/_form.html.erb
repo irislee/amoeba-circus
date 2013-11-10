@@ -21,8 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :amoebas %><br>
-    <%= check_box_tag 'acts[amoebas][]', amoeba.id, false, :id => amoeba.name %>
-    <%#= f.collection_check_boxes(:amoeba_ids, @amoebas, :id, :name) %>
+    <%= f.collection_check_boxes(:amoeba_ids, @amoebas, :id, :name) %>
   </div>
   <div class="actions">
     <%= f.submit %>

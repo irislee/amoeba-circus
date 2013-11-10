@@ -23,6 +23,10 @@
     <%= f.label :talent_id %><br>
     <%= f.collection_radio_buttons(:talent_id, @talents, :id, :name) %>
   </div>
+  <div class="field">
+    <%= f.label :acts %><br>
+    <%= f.collection_check_boxes(:act_ids, @acts, :id, :name) %>
+  </div>  
   <div class="actions">
     <%= f.submit %>
   </div>

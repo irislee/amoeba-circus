@@ -16,10 +16,13 @@ class AmoebasController < ApplicationController
   def new
     @amoeba = Amoeba.new
     @talents = Talent.all
+    @acts = Act.all
   end
 
   # GET /amoebas/1/edit
   def edit
+    @talents = Talent.all
+    @acts = Act.all
   end
 
   # POST /amoebas

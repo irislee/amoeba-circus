@@ -1,0 +1,18 @@
+<h1>Dashboard</h1>
+<div>
+  <h2>Amoebas</h2>
+  <ul>
+    <% @amoebas.each do |amoeba| %>
+      <li><%= link_to amoeba.name, amoeba_path(amoeba) %></li>
+    <% end %>
+  </ul>
+</div>
+
+<div>
+  <h2>Acts</h2>
+  <ul>
+    <% @acts.each do |act| %>
+      <li><%= link_to act.name, act_path(act) %></li>
+    <% end %>
+  </ul>
+</div>
